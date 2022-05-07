@@ -264,7 +264,7 @@ censys:
 fofa: []
 ```
 
-Text:
+Gather information:
 
 ```fundamental
 uncover -nc -json -o uncover_results.json -l 100 -e shodan,censys -q somedomain.com
