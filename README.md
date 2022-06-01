@@ -874,10 +874,16 @@ Download the latest version from [GitHub](https://github.com/projectdiscovery/nu
 
 Download the latest [Nuclei templates](https://github.com/projectdiscovery/nuclei-templates/releases).
 
-Vulnerability scan:
+To download and/or update templates:
+
+```bash
+mkdir -p ~/nuclei-templates && nuclei -ut ~/nuclei-templates
+```
+
+Vulnerability scan (all templates):
 
 ```fundamental
-nuclei -c 500 -t nuclei-templates -o nuclei_results.txt -l urls.txt
+nuclei -c 500 -o nuclei_results.txt -l urls.txt
 
 cat nuclei_results.txt | grep '\]\ .+' | sort -uf | nuclei_sorted_results.txt
 ```
@@ -885,7 +891,7 @@ cat nuclei_results.txt | grep '\]\ .+' | sort -uf | nuclei_sorted_results.txt
 Only subdomain takeover:
 
 ```fundamental
-nuclei -c 500 -t nuclei-templates/takeovers -o nuclei_takeover_results.txt -l urls.txt
+nuclei -c 500 -t ~/nuclei-templates/takeovers -o nuclei_takeover_results.txt -l urls.txt
 ```
 
 ### dotdotpwn
