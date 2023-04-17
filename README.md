@@ -146,7 +146,7 @@ My other cheat sheets:
 Most of the tools can be installed with Linux package manager:
 
 ```bash
-apt-get update && apt-get install -y sometool
+apt-get update && apt-get -y install sometool
 ```
 
 For more information visit [www.kali.org/tools](https://www.kali.org/tools).
@@ -169,7 +169,7 @@ go build sometool.go
 go install -v github.com/user/sometool@latest
 ```
 
-To set up Golang, run `apt-get install -y golang`, add the following lines to `~/.zshrc`, and then run `source ~/.zshrc`:
+To set up Golang, run `apt-get -y install golang`, add the following lines to `~/.zshrc`, and then run `source ~/.zshrc`:
 
 ```fundamental
 export GOROOT=/usr/lib/go
@@ -228,7 +228,7 @@ If Google or any other search engine or service blocks your tool, use ProxyChain
 Installation:
 
 ```bash
-apt-get update && apt-get install -y proxychains4 tor torbrowser-launcher
+apt-get update && apt-get -y install proxychains4 tor torbrowser-launcher
 ```
 
 Do the following changes to `/etc/proxychains4.conf`:
@@ -663,7 +663,7 @@ chad -sos no -d chad_results -tr 100 -q "ext:txt OR ext:pdf OR ext:doc OR ext:do
 Extract authors from the files:
 
 ```bash
-apt-get install -y libimage-exiftool-perl
+apt-get -y install libimage-exiftool-perl
 
 exiftool chad_results | grep -Po 'Author.+(?<=\:)[\s]+\K.+' | sort -uf | tee -a people.txt
 ```
@@ -828,7 +828,7 @@ Download a useful collection of multiple types of lists for security assessments
 Installation:
 
 ```bash
-apt-get update && apt-get install -y seclists
+apt-get update && apt-get -y install seclists
 ```
 
 Lists will be stored at `/usr/share/seclists/`.
@@ -973,7 +973,7 @@ wpscan -o wpscan_results.txt --url somesite.com
 Installation:
 
 ```bash
-apt-get update && apt-get install -y testssl.sh
+apt-get update && apt-get -y install testssl.sh
 ```
 
 Test an SSL/TLS certificate (i.e. SSL/TLS ciphers, protocols, etc.):
@@ -1097,7 +1097,7 @@ subjack -v -o subjack_results.json -t 100 -timeout 3 -a -m -w subdomains.txt
 Installation:
 
 ```bash
-apt-get update && apt-get install -y nuclei
+apt-get update && apt-get -y install nuclei
 ```
 
 Download the latest [Nuclei templates](https://github.com/projectdiscovery/nuclei-templates/releases).
