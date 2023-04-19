@@ -1102,7 +1102,7 @@ apt-get update && apt-get -y install nuclei
 
 Download the latest [Nuclei templates](https://github.com/projectdiscovery/nuclei-templates/releases).
 
-To download and/or update Nuclei templates:
+To download and/or update Nuclei templates, run:
 
 ```bash
 mkdir ~/nuclei-templates && nuclei -ut ~/nuclei-templates
